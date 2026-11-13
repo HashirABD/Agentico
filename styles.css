@@ -1,0 +1,94 @@
+/* Agentico Custom Stylesheet */
+
+@keyframes pulseSubtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.02); }
+}
+
+@keyframes scaleUp {
+  from { opacity: 0; transform: scale(0.96) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.animate-scale-up {
+  animation: scaleUp 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom Scrollbar for sleek aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF9F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D5D3CC;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B5B2A9;
+}
+
+/* Range input styling for ROI slider */
+input[type="range"] {
+  -webkit-appearance: none;
+  background: #E7E5E0;
+  border-radius: 9999px;
+  height: 6px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #121316;
+  cursor: pointer;
+  border: 2px solid #FAF9F5;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  background: #4F46E5;
+}
+
+/* Grid columns for heatmap bar */
+.grid-cols-24 {
+  grid-template-columns: repeat(24, minmax(0, 1fr));
+}
+
+@media (min-width: 640px) {
+  .grid-cols-48 {
+    grid-template-columns: repeat(48, minmax(0, 1fr));
+  }
+}
+
+/* Interactive card hover sheen */
+.feature-tab-btn.active {
+  background-color: #FFFFFF !important;
+  color: #121316 !important;
+  box-shadow: 0 2px 8px rgba(18, 19, 22, 0.08) !important;
+}
+
+/* Smooth transitions for accordion */
+.faq-content {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Code block / Terminal lines */
+.terminal-line {
+  animation: fadeInLine 0.3s ease forwards;
+}
+
+@keyframes fadeInLine {
+  from { opacity: 0; transform: translateX(-5px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
